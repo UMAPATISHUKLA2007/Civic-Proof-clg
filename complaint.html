@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CivicProof - Public Issue AI Verification & Complaint Portal</title>
+    <link rel="stylesheet" href="complaint.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header>
+        <div>
+            <h1>CivicProof</h1>
+            <p>Together for a Better Society</p>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="navbar.html">Home</a></li>
+                <li><a href="reports.html">My Reports</a></li>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="#ai-verify">AI Verify</a></li>
+                <li><a href="#updates">Updates</a></li>
+                <li><a href="complaint.html">Report a Complaint</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <hr>
+
+    <main>
+        <!-- Page Title & Header Info -->
+        <section>
+            <h2>VERIFY-AI // PUBLIC ARCHITECTURE SPECIFICATION</h2>
+            <p>User Interface Design System for Public Issue AI Verification</p>
+            <h3>Public Issue AI Verification Interface Mockup & Layout</h3>
+            <p>A dual-panel interface designed for accessibility, high-trust transparency, and deep forensic clarity when analyzing public claims, deepfakes, and manipulated media.</p>
+        </section>
+
+        <hr>
+
+        <!-- Main Content Area: Dual Column Structure -->
+        <section>
+            <!-- Left Column: Submission Panel & System Status -->
+            <article>
+                <section>
+                    <h3>1. SUBMISSION PANEL</h3>
+                    <form>
+                        <!-- File Upload -->
+                        <div>
+                            <label for="evidence-file">Drag & Drop Evidence File</label>
+                            <br>
+                            <input type="file" id="evidence-file" name="evidence-file">
+                            <p><small>Supports Video (MP4), Audio (WAV/MP3), Images, or URLs</small></p>
+                        </div>
+
+                        <!-- URL Input -->
+                        <div>
+                            <label for="social-link">Or Paste Claim / Social Media Link:</label>
+                            <br>
+                            <input type="url" id="social-link" name="social-link" placeholder="https://twitter.com/public_post/status/8941203">
+                        </div>
+
+                        <br>
+
+                        <!-- Category Selection -->
+                        <div>
+                            <label for="category">Context / Domain Category:</label>
+                            <br>
+                            <select id="category" name="category">
+                                <option value="elections">Elections & Political Speech</option>
+                                <option value="infrastructure">Public Infrastructure & Potholes</option>
+                                <option value="sanitation">Sanitation & Garbage Disposal</option>
+                                <option value="water-supply">Water Supply & Electricity</option>
+                                <option value="public-safety">Public Safety & Nuisance</option>
+                            </select>
+                        </div>
+
+                        <br>
+
+                        <!-- Additional Notes -->
+                        <div>
+                            <label for="context-notes">Additional Context Notes:</label>
+                            <br>
+                            <textarea id="context-notes" name="context-notes" rows="4" cols="50" placeholder="Video claiming mayor announced emergency curfew on Aug 18."></textarea>
+                        </div>
+
+                        <br>
+
+                        <!-- Submit Button -->
+                        <div>
+                            <button type="submit">Run Multi-Model Verification</button>
+                        </div>
+                    </form>
+                </section>
+
+                <hr>
+
+                <!-- System Health & Transparency -->
+                <section>
+                    <h3>SYSTEM HEALTH & TRANSPARENCY</h3>
+                    <p><strong>Active Ensemble Models:</strong></p>
+                    <ul>
+                        <li>Deepfake Visual Detection v4.2</li>
+                        <li>Audio Synthetic Voice Classifier</li>
+                        <li>Fact-Check Claim Knowledge Graph</li>
+                    </ul>
+                </section>
+            </article>
+
+            <hr>
+
+            <!-- Right Column: Verification Results & Forensic Analysis -->
+            <article>
+                <section>
+                    <h3>2. VERIFICATION RESULT & FORENSIC ANALYSIS</h3>
+                    
+                    <!-- Overall Status -->
+                    <div>
+                        <h4>HIGHLY MANIPULATED</h4>
+                        <p><strong>Risk Score:</strong> 88.4%</p>
+                        <p>Deepfake audio overlay & synthetic facial modification detected.</p>
+                    </div>
+
+                    <!-- Visual Artifact Analysis -->
+                    <div>
+                        <h5>Visual Artifact Analysis Overlay</h5>
+                        <p><strong>FRAME #0412:</strong> Mouth Sync Anomaly (94%)</p>
+                        <p>Red highlighted zone indicates temporal frame inconsistency around mouth movements & synthetic voice misalignment.</p>
+                    </div>
+
+                    <!-- Breakdown Metrics -->
+                    <div>
+                        <p><strong>Facial Landmark Inconsistency:</strong> 91% Probability</p>
+                        <progress value="91" max="100">91%</progress>
+
+                        <p><strong>Synthetic Voice Spectrum (TTS Engine):</strong> 84% Match</p>
+                        <progress value="84" max="100">84%</progress>
+
+                        <p><strong>Official Government Source Match:</strong> 0 Matches Found</p>
+                        <progress value="0" max="100">0%</progress>
+                    </div>
+
+                    <br>
+
+                    <!-- Action Buttons -->
+                    <div>
+                        <button type="button">Export PDF Certificate</button>
+                        <button type="button">Share Public Link</button>
+                        <button type="button">Dispute / Request Human Review</button>
+                    </div>
+                </section>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- Principles & Features Section -->
+        <section>
+            <!-- Visual & Layout Principles -->
+            <article>
+                <h3>Visual & Layout Principles</h3>
+                <ul>
+                    <li>
+                        <strong>Dual-Column Workflow:</strong> Separates input controls from dynamic output results to maintain clear focus.
+                    </li>
+                    <li>
+                        <strong>Clear Color Hierarchy:</strong> Red/Amber/Green indicators instantly communicate authenticity risk levels to the public without ambiguity.
+                    </li>
+                    <li>
+                        <strong>Visual Evidence First:</strong> Spatial overlays and frame-by-frame heatmaps build public trust by showing "where" manipulation occurred.
+                    </li>
+                    <li>
+                        <strong>Low Cognitive Load:</strong> Direct summaries for citizens, with expandable granular details for researchers and journalists.
+                    </li>
+                </ul>
+            </article>
+
+            <hr>
+
+            <!-- Essential UI Features -->
+            <article>
+                <h3>Essential UI Features</h3>
+                <ul>
+                    <li>
+                        <strong>Multi-Input Flexibility:</strong> Accepts direct text claims, social URLs, audio clips, and high-res video files seamlessly.
+                    </li>
+                    <li>
+                        <strong>Explainable Scorecard:</strong> Replaces black-box percentages with segmented breakdown metrics (Visual, Audio, Context).
+                    </li>
+                    <li>
+                        <strong>Human-in-the-Loop Escalation:</strong> "Dispute / Request Human Review" button allows flagging edge-case errors to expert moderators.
+                    </li>
+                    <li>
+                        <strong>Auditability:</strong> One-click exportable PDF reports featuring tamper-proof cryptographic hashes for legal/news use.
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 CivicProof - Public Issue AI Verification System. All rights reserved.</p>
+    </footer>
+<script src="complaint.js"></script>
+</body>
+</html>

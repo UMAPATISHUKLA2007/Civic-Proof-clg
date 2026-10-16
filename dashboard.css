@@ -1,0 +1,663 @@
+/* ==========================================
+   CIVIPROOF — CITIZEN DASHBOARD CSS
+   Theme: Sky Blue + White
+========================================== */
+
+/* 1. Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #087bea;
+    --primary-dark: #0563c5;
+    --primary-light: #e5f1ff;
+    --background: #f5f9fd;
+    --white: #ffffff;
+    --text: #171c26;
+    --muted: #64748b;
+    --border: #e2eaf3;
+    --green: #16a34a;
+    --green-light: #e5f8ec;
+    --orange: #f97316;
+    --orange-light: #fff1d6;
+    --shadow: 0 4px 15px rgba(20, 70, 120, 0.07);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+button,
+a {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 2. Navbar */
+
+header {
+    width: 100%;
+    min-height: 80px;
+    padding: 12px 4%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background: linear-gradient(110deg, #087bea, #078be9);
+    color: var(--white);
+    box-shadow: 0 3px 12px rgba(0, 90, 190, 0.12);
+}
+
+header > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+header img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+header h1 {
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+header nav a {
+    color: var(--white);
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+header nav a:hover {
+    opacity: 0.8;
+}
+
+/* 3. Main Dashboard */
+
+main {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 26px 3.7% 40px;
+}
+
+/* 4. Welcome Section */
+
+main > section:first-child {
+    margin-bottom: 18px;
+}
+
+main > section:first-child h2 {
+    font-size: 27px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
+}
+
+#userName {
+    color: var(--primary);
+    overflow-wrap: anywhere;
+}
+
+main > section:first-child p {
+    color: #424b57;
+    font-size: 16px;
+}
+
+/* 5. Summary Cards */
+
+main > section:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 20px;
+}
+
+main > section:nth-child(2) article {
+    min-height: 125px;
+    padding: 22px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+main > section:nth-child(2) article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(20, 70, 120, 0.11);
+}
+
+main > section:nth-child(2) h3 {
+    color: #242b36;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 3px;
+}
+
+main > section:nth-child(2) article p {
+    color: var(--primary);
+    font-size: 31px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* In Progress Number */
+
+main > section:nth-child(2) article:nth-child(2) p {
+    color: var(--orange);
+}
+
+/* Resolved Number */
+
+main > section:nth-child(2) article:nth-child(3) p {
+    color: var(--green);
+}
+
+/* 6. Dashboard Content Cards */
+
+main > section:nth-child(n+3):nth-child(-n+6) {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 22px 25px;
+    margin-bottom: 18px;
+    min-width: 0;
+}
+
+main > section:nth-child(n+3):nth-child(-n+6) > h2 {
+    font-size: 20px;
+    font-weight: 650;
+    margin-bottom: 18px;
+}
+
+/* 7. Active Complaint Tracker */
+
+main > section:nth-child(3) h3 {
+    font-size: 18px;
+    font-weight: 650;
+    margin-bottom: 18px;
+}
+
+main > section:nth-child(3) > p:first-of-type {
+    display: inline-block;
+    margin: 0 0 8px 12px;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+main > section:nth-child(3) progress {
+    display: block;
+    width: min(100%, 600px);
+    height: 9px;
+    margin: 0 0 18px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    background: #e5eaf0;
+}
+
+main > section:nth-child(3) progress::-webkit-progress-bar {
+    background: #e5eaf0;
+    border-radius: 20px;
+}
+
+main > section:nth-child(3) progress::-webkit-progress-value {
+    background: linear-gradient(90deg, #078bea, #0563d9);
+    border-radius: 20px;
+}
+
+main > section:nth-child(3) progress::-moz-progress-bar {
+    background: var(--primary);
+    border-radius: 20px;
+}
+
+main > section:nth-child(3) > p:last-of-type {
+    margin: 10px 0 18px;
+    font-size: 15px;
+    color: #424b57;
+}
+
+main > section:nth-child(3) button {
+    min-height: 44px;
+    padding: 10px 22px;
+    margin: 0 14px 0 0;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+main > section:nth-child(3) button:first-of-type {
+    color: var(--white);
+    background: var(--primary);
+}
+
+main > section:nth-child(3) button:first-of-type:hover {
+    background: var(--primary-dark);
+}
+
+main > section:nth-child(3) button:last-of-type {
+    color: var(--primary);
+    background: var(--white);
+}
+
+main > section:nth-child(3) button:last-of-type:hover {
+    background: var(--primary-light);
+}
+
+/* 8. Citizen Impact Score */
+
+main > section:nth-child(4) {
+    text-align: center;
+}
+
+main > section:nth-child(4) > h2 {
+    text-align: left;
+}
+
+main > section:nth-child(4) h3 {
+    display: flex;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 10px;
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+    background: #fafdff;
+    color: var(--primary);
+    font-size: 29px;
+    font-weight: 750;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 15px;
+}
+
+main > section:nth-child(4) h3::before {
+    content: "★";
+    position: absolute;
+    top: 3px;
+    font-size: 22px;
+    color: #ffb000;
+}
+
+main > section:nth-child(4) p {
+    margin-bottom: 15px;
+    color: #424b57;
+}
+
+main > section:nth-child(4) button {
+    padding: 10px 22px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+    background: var(--white);
+    color: var(--primary);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+main > section:nth-child(4) button:hover {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* 9. Reported Locations / Map */
+
+#reportedMap {
+    width: 100%;
+    min-height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #dce7ed;
+    border-radius: 10px;
+    background:
+        linear-gradient(35deg, transparent 46%, #d8e9ef 47%, #d8e9ef 49%, transparent 50%),
+        linear-gradient(145deg, transparent 40%, #e0eadf 41%, #e0eadf 44%, transparent 45%),
+        #f0f5ee;
+    overflow: hidden;
+}
+
+#reportedMap p {
+    color: var(--muted);
+    font-size: 15px;
+    text-align: center;
+}
+
+/* 10. Recent Activity */
+
+#recentActivity {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#recentActivity li {
+    position: relative;
+    padding: 8px 8px 8px 25px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    border-bottom: 1px solid #f0f3f7;
+}
+
+#recentActivity li::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--primary);
+}
+
+main > section:nth-child(6) > a {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--primary);
+    font-weight: 600;
+}
+
+main > section:nth-child(6) > a:hover {
+    text-decoration: underline;
+}
+
+/* 11. Quick Actions */
+
+main > section:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 20px 24px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+main > section:last-child h2 {
+    font-size: 19px;
+    font-weight: 650;
+    margin-right: 10px;
+}
+
+main > section:last-child a {
+    flex: 1 1 180px;
+}
+
+main > section:last-child button {
+    width: 100%;
+    min-height: 48px;
+    padding: 11px 14px;
+    border: 1px solid transparent;
+    border-radius: 9px;
+    background: var(--primary-light);
+    color: #0757b8;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+main > section:last-child a:nth-of-type(2) button {
+    background: #eaf3ff;
+}
+
+main > section:last-child a:nth-of-type(3) button {
+    background: var(--green-light);
+    color: #166534;
+}
+
+main > section:last-child button:hover {
+    filter: brightness(0.96);
+    transform: translateY(-2px);
+}
+
+/* 12. Keyboard Focus */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+/* 13. Tablet Responsive */
+
+@media (min-width: 900px) {
+    main > section:nth-child(3),
+    main > section:nth-child(4),
+    main > section:nth-child(5),
+    main > section:nth-child(6) {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    main > section:nth-child(3) {
+        width: calc(58% - 10px);
+        margin-right: 1%;
+    }
+
+    main > section:nth-child(4) {
+        width: calc(42% - 10px);
+    }
+
+    main > section:nth-child(5) {
+        width: calc(52% - 10px);
+        margin-right: 1%;
+    }
+
+    main > section:nth-child(6) {
+        width: calc(48% - 10px);
+    }
+}
+
+@media (max-width: 899px) {
+    main {
+        padding: 22px 20px 32px;
+    }
+
+    main > section:nth-child(2) {
+        gap: 12px;
+    }
+
+    main > section:nth-child(2) article {
+        padding: 18px;
+    }
+
+    main > section:nth-child(n+3):nth-child(-n+6) {
+        padding: 20px;
+    }
+
+    main > section:last-child {
+        justify-content: flex-start;
+    }
+
+    main > section:last-child h2 {
+        flex-basis: 100%;
+    }
+}
+
+/* 14. Mobile Responsive */
+
+@media (max-width: 600px) {
+    header {
+        min-height: 68px;
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    header img {
+        width: 38px;
+        height: 38px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+
+    header nav {
+        gap: 12px;
+    }
+
+    header nav a {
+        font-size: 12px;
+    }
+
+    main {
+        padding: 20px 14px 28px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 22px;
+    }
+
+    main > section:first-child p {
+        font-size: 14px;
+    }
+
+    main > section:nth-child(2) {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    main > section:nth-child(2) article {
+        min-height: 95px;
+        padding: 17px 20px;
+    }
+
+    main > section:nth-child(2) h3 {
+        font-size: 16px;
+    }
+
+    main > section:nth-child(2) article p {
+        font-size: 27px;
+    }
+
+    main > section:nth-child(n+3):nth-child(-n+6) {
+        padding: 18px 15px;
+        margin-bottom: 14px;
+    }
+
+    main > section:nth-child(n+3):nth-child(-n+6) > h2 {
+        font-size: 18px;
+    }
+
+    main > section:nth-child(3) h3 {
+        font-size: 16px;
+    }
+
+    main > section:nth-child(3) button {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    main > section:nth-child(4) h3 {
+        width: 105px;
+        height: 105px;
+        font-size: 27px;
+    }
+
+    #reportedMap {
+        min-height: 170px;
+        padding: 12px;
+    }
+
+    #recentActivity li {
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    main > section:last-child {
+        padding: 18px 15px;
+        gap: 12px;
+    }
+
+    main > section:last-child h2 {
+        font-size: 18px;
+    }
+
+    main > section:last-child a {
+        flex-basis: 100%;
+    }
+
+    main > section:last-child button {
+        min-height: 46px;
+        font-size: 14px;
+    }
+}
+
+/* 15. Small Mobile Screens */
+
+@media (max-width: 360px) {
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 17px;
+    }
+
+    header img {
+        width: 32px;
+        height: 32px;
+    }
+
+    header nav {
+        gap: 8px;
+    }
+
+    header nav a {
+        font-size: 11px;
+    }
+
+    main {
+        padding: 16px 10px;
+    }
+
+    main > section:first-child h2 {
+        font-size: 20px;
+    }
+}

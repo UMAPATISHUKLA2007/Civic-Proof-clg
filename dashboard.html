@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiviProof - Citizen Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <div>
+            <img src="logo.png" alt="CiviProof Logo" width="50">
+            <h1>CivicProof</h1>
+        </div>
+
+        <nav>
+            <a href="notifications.html">🔔 Notifications</a>
+            <a href="profile.html">👤 Profile</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Welcome Section -->
+        <section>
+            <h2>👋 Welcome back, <span id="userName">User</span>!</h2>
+            <p>Here is the summary of your civic contributions and active reports.</p>
+        </section>
+
+        <!-- Report Summary -->
+        <section>
+            <article>
+                <h3>📊 Total Reports</h3>
+                <p id="totalReports">12</p>
+            </article>
+
+            <article>
+                <h3>⏳ In Progress</h3>
+                <p id="inProgress">3</p>
+            </article>
+
+            <article>
+                <h3>✅ Resolved Issues</h3>
+                <p id="resolvedIssues">8</p>
+            </article>
+        </section>
+
+        <!-- Active Complaint Tracker -->
+        <section>
+            <h2>🚀 Active Complaint Tracker</h2>
+
+            <h3>Pothole on Main Road (Sector 45)</h3>
+
+            <p>Progress: 75%</p>
+
+            <progress value="75" max="100">75%</progress>
+
+            <p>Status: In Progress</p>
+
+            <button onclick="viewDetails()">View Details</button>
+            <button onclick="sendReminder()">Send Reminder</button>
+        </section>
+
+        <!-- Citizen Impact Score -->
+        <section>
+            <h2>⚡ Citizen Impact Score</h2>
+
+            <h3>⭐ 180 Points</h3>
+            <p>Badge: Active Hero</p>
+
+            <button onclick="redeemRewards()">Redeem Rewards</button>
+        </section>
+
+        <!-- Reported Locations -->
+        <section>
+            <h2>🗺️ Your Reported Locations</h2>
+
+            <div id="reportedMap">
+                <p>Interactive map will appear here.</p>
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section>
+            <h2>🔔 Recent Activity</h2>
+
+            <ul id="recentActivity">
+                <li>Status updated: Pothole filled</li>
+                <li>Admin replied to Water leakage report</li>
+                <li>Your complaint Streetlight not working is in progress</li>
+            </ul>
+
+            <a href="activity.html">View All Activity</a>
+        </section>
+
+        <!-- Quick Actions -->
+        <section>
+            <h2>⚡ Quick Actions</h2>
+
+            <a href="complaint.html">
+                <button>➕ Report New Issue</button>
+            </a>
+
+            <a href="my-reports.html">
+                <button>📋 View All My Reports</button>
+            </a>
+
+            <a href="ai-verify.html">
+                <button>🤖 AI Verify</button>
+            </a>
+        </section>
+
+    </main>
+
+    <script>
+        // Replace this with the name saved by your login system.
+        const loggedInUser = localStorage.getItem("userName");
+
+        document.getElementById("userName").textContent =
+            loggedInUser || "User";
+
+        function viewDetails() {
+            window.location.href = "complaint-details.html";
+        }
+
+        function sendReminder() {
+            alert("Reminder request submitted.");
+        }
+
+        function redeemRewards() {
+            window.location.href = "rewards.html";
+        }
+    </script>
+<script src="dashboard.js"></script>
+</body>
+</html>
